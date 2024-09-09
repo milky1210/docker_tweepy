@@ -1,0 +1,9 @@
+services:
+  docker_tweepy:
+    restart: always
+    build: .
+    container_name: 'docker_tweepy'
+    working_dir: '/root/app'
+    tty: true
+    volumes:
+      - ./app:/root/app
