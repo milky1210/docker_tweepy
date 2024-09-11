@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-import tweeter
+import tweepy_utils as tweepy_utils
 
 # 日本標準時 (JST) タイムゾーンを定義
 JST = timezone(timedelta(hours=9))
@@ -33,4 +33,4 @@ if not txt_path.exists():
 with txt_path.open("r", encoding="utf-8") as file:
     tweet_txt = file.read()
 
-tweeter.tweet_img(img_path, tweet_txt)
+tweepy_utils.tweet_img(img_path, tweet_txt)
